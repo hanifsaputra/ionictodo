@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Phone Book
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()"><ion-icon name="add-circle"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="viewItem(item)"><ion-icon ios="ios-contact" md="md-contact"></ion-icon>  {{item.title}}</ion-item>
+  </ion-list>
+</ion-content>
